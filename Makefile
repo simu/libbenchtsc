@@ -19,7 +19,7 @@
 #
 
 CFLAGS=-Wall -O2 -std=gnu11
-PREFIX=/home/gerbesim/.local
+PREFIX=/usr/local
 VERSION=1
 MINOR=0
 LIBFNAME=libbenchtsc.so.$(VERSION).$(MINOR)
