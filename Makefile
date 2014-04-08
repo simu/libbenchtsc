@@ -34,6 +34,8 @@ bench_rdtsc.o: bench_rdtsc.c
 install: $(LIBFNAME) bench_rdtsc.h
 	install -m 644 -C $(LIBFNAME) -D $(PREFIX)/lib/$(LIBFNAME)
 	ldconfig -l $(PREFIX)/lib/$(LIBFNAME)
+	# also need plain .so link
+	ln -s $(PREFIX)/lib/$(LIBFNAME) $(PREFIX)/lib/libbenchtsc.so
 	mkdir -p $(PREFIX)/include
 	install -m 644 -C bench_rdtsc.h $(PREFIX)/include
 
